@@ -1,0 +1,15 @@
+util\H2jdbcGetUSER.class
+crc\Crc32.class
+util\CreateTablesUSER.class
+crc\Crc16.class
+util\H2jdbcInsertREGISTRATION.class
+util\DataHoreDemo.class
+util\H2jdbcInsertUSER.class
+crc\CrcHelper.class
+crc\Main.class
+util\CreateTablesREGISTRATION.class
+util\H2jdbcGetREGISTRATION.class
+crc\Crc64.class
+crc\AlgoParams.class
+crc\Crc8.class
+crc\CrcCalculator.class

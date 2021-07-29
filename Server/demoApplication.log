@@ -1,0 +1,6 @@
+[main] DEBUG LogTest  - Log4j appender configuration is successful !!
+[main] DEBUG LogTest  - Log4j appender configuration is successful !!
+[main] DEBUG LogTest  - Log4j appender configuration is successful !!
+[main] DEBUG util.LogTest  - Log4j appender configuration is successful !!
+[main] DEBUG util.LogTest  - Log4j appender configuration is successful !!
+[main] DEBUG util.LogTest  - Log4j appender configuration is successful !!
