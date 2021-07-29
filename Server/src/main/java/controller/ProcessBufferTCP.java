@@ -18,6 +18,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 import crc.ControleCRC;
+import java.util.Arrays;
 import model.Data;
 import model.Registration;
 import util.LogGenerator;
@@ -43,6 +44,7 @@ public class ProcessBufferTCP {
                 
                String hexaRPC = Integer.toHexString(rpcCodeInit).toUpperCase();
                System.out.println(hexaRPC);
+               log.inserInfo("Init received : " + hexaRPC);
                
                if(rpcCodeInit == 10){ ///0x0A              
 
@@ -56,6 +58,7 @@ public class ProcessBufferTCP {
                 
                     String hexatamanhoBytes = Integer.toHexString(tamanhoBytes).toUpperCase();
                     System.out.println(hexatamanhoBytes);
+                    log.inserInfo("Byte received : " + hexatamanhoBytes);
                 
                     //----------------- FRAME -----------------------//
                     ByteBuffer buffer3 = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN);
@@ -67,6 +70,7 @@ public class ProcessBufferTCP {
                 
                     String hexaFrame = Integer.toHexString(frame).toUpperCase();
                     System.out.println(hexaFrame);
+                    log.inserInfo("Frame received : " + hexaFrame);
                 
                     //----------------- DATA -----------------------//
                     ByteBuffer buffer4 = ByteBuffer.allocate(tamanhoBytes).order(ByteOrder.LITTLE_ENDIAN);
@@ -74,7 +78,8 @@ public class ProcessBufferTCP {
                     inputStream.read(data);
                     
                     System.out.println(data);
-             
+                    String req = Arrays.toString(data);
+                    log.inserInfo("Data received : " + req);
                     //----------------- CRC -----------------------//
                     ByteBuffer buffer5 = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN);
                     byte[] bytes5 = new byte[buffer5.limit()];
@@ -85,7 +90,8 @@ public class ProcessBufferTCP {
                 
                     String hexaCRC = Integer.toHexString(CRC).toUpperCase();
                     System.out.println(hexaCRC);    
-             
+                    log.inserInfo("CRC received : " + hexaCRC);
+                    
                     //----------------- END -----------------------//
                     ByteBuffer buffer6 = ByteBuffer.allocate(4).order(ByteOrder.LITTLE_ENDIAN);
                     byte[] bytes6 = new byte[buffer6.limit()];
@@ -96,7 +102,8 @@ public class ProcessBufferTCP {
                 
                     String hexaEnd = Integer.toHexString(end).toUpperCase();
                     System.out.println(hexaEnd); 
-             
+                    log.inserInfo("END received : " + hexaEnd);
+                    
                     if(validaCRC(data, tamanhoBytes, frame, CRC)){
                         if(validaEND(end)){
                             ProcessFrame pFrame = new ProcessFrame();
@@ -167,6 +174,9 @@ public class ProcessBufferTCP {
             // sending data to server
             outputStream.write(data);
             outputStream.flush();
+            
+            String req = Arrays.toString(data);
+            log.inserInfo("Sent to client : " + req);
 
         } catch (IOException i) {
             System.out.println(i);
@@ -186,7 +196,10 @@ public class ProcessBufferTCP {
             // sending data to server
             outputStream.write(data);
             outputStream.flush();
-
+            
+            String req = Arrays.toString(data);
+            log.inserInfo("Sent to client : " + req);
+            
         } catch (IOException i) {
             System.out.println(i);
         }
@@ -202,6 +215,9 @@ public class ProcessBufferTCP {
             // sending data to server
             outputStream.write(data);
             outputStream.flush();
+            
+            String req = Arrays.toString(data);
+            log.inserInfo("Sent to client : " + req);
 
         } catch (IOException i) {
             System.out.println(i);
