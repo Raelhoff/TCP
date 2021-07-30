@@ -26,13 +26,12 @@ Depois de realizar a instalação do ambiente de desenvolvimento, realize o down
 git clone https://github.com/Raelhoff/TCP.git
 
 
-###################################################### Configuração do Projeto  ######################################################
-
+# Configuração do Projeto
 Abra o projeto Client e Server em um ambiente de desenvolvimento da sua escolha (NetBeans, Eclipse, etc). Posteriomente,
 realize o download das dependecias do projeto por meio do Maven.
 
 
-# Criar tabela do banco de dados
+## Criar tabela do banco de dados
 Para criar as tabelas (REGISTRATION, USER), entre no projeto Server, e execute as classes:
 -> CreateTablesREGISTRATION.java
 -> CreateTablesUSER.java
@@ -43,7 +42,7 @@ As mesmas podem ser encontradas no pacote:
 	    util
 		
 
-# Testar CRC-8
+## Testar CRC-8
 Para testar a criptografia, execute a classe:
 Main.java
 
@@ -60,7 +59,7 @@ Como resultado, deve ser obetido:
 
 
 		
-# Testar consulta e inserção de dados no banco de dados H2        
+## Testar consulta e inserção de dados no banco de dados H2        
 Para realizar o cadastro de dados nas tabelas (REGISTRATION, USER), execute as classes:
 -> H2jdbcInsertREGISTRATION.java
 -> H2jdbcInsertUSER.java 
@@ -83,7 +82,7 @@ ID: 1
 Mensagem: Ok
 Data: 27/07/2021
 
-# Testar configurações do arquivo de Log (Log4j)
+## Testar configurações do arquivo de Log (Log4j)
 Na raiz do projeto (Server e Cliente) existe um arquivo "log4j.properties". Edite cada arquivo e 
 modifique o paramentro "log4j.appender.file.File" para o diretorio da sua escolha:
 Exemplo:
@@ -100,14 +99,15 @@ Como resultado se estiver tudo certo devera aparecer:
   2021-07-29 19:36:42 ERROR LogTest:29 - This is an Error
   2021-07-29 19:36:42 FATAL LogTest:30 - This is a Fatal
   
-  
-###################################################### Execute Projeto Server ######################################################
+# Iniciando Projeto TCP 
+
+## Execute Projeto Server
 Para executar o projeto server, entre no pacote serverTCP, e posteriormente execute (Run File):
 -> Server_X_Client.java (Run File)
 
 Por padrão, o servidor está configurado com a porta: 4447
 
-################################################# Executando do Projeto Client ######################################################
+## Executando do Projeto Client
 Para executar o projeto client, entre no pacote com.mycompany.client, e posteriormente execute (Run File):
 -> SendPackage.java
 
@@ -130,7 +130,7 @@ Escolha a opção desejada (tipo de pacote a ser enviado ao servidor):
    
 4) Sair
 
-################################################# Simular ServidorTCP com varios conexões (client) ######################################################
+# Simular ServidorTCP com varios conexões (client)
 
 Similar a ferramenta como PacketSender, foi utilizado a aplicação Hercules SETUP utility (Link para download: https://www.hw-group.com/files/download/sw/version/hercules_3-2-8.exe).
 
@@ -140,9 +140,9 @@ Diante do exposto, pode ser executado multiplas aplicações (Hercules) TCP Clie
 
 Na pasta docs (raiz do projeto) tem imagens que ajudam a realizar a simulação com multiplos clientes (Hercules Setup).
 
-######  Exemplos de pacotes aceitos
+##  Exemplos de pacotes aceitos
 
-## Pacote A1
+### Pacote A1
 Exemplo de mensagem a ser enviar (1): Bom dia
 Comando enviado (client to server): 0A00000007000000A1000000426F6D20646961E80000000D000000
 
@@ -158,7 +158,7 @@ Exemplo de comando recebido (server to client):
 0A000000410000000A0000004D656E736167656D20666F6920726563656269646120652061726D617A656E616461206E6F2062616E636F202D20323032312F30372F32392032303A33333A30392C0000000D000000
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Pacote A2
+### Pacote A2
 Exemplo de mensagem a ser enviar (1):
 Entre com a idade
 -> 30
@@ -197,7 +197,7 @@ Comando enviado (client to server): 0A00000027000000A20000005900000038000000A000
 
 Exemplo de comando recebido (server to client): 0A0000002C0000000A0000004D656E736167656D20666F6920726563656269646120652061726D617A656E616461206E6F2062616E636F20FA0000000D000000
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Pacote A3
+### Pacote A3
 
 Exemplo de mensagem a ser enviar (1): 
 Entre com o servidor (America/Sao_Paulo)
