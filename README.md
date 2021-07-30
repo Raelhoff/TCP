@@ -100,8 +100,9 @@ Como resultado, deve ser obtido:
 -> CRC-8 - BAD ALGO!!! C6
 
 ## Testar configurações do arquivo de Log (Log4j)
-Na raiz do projeto (Server e Cliente) existe um arquivo "log4j.properties". Edite cada arquivo e 
-modifique o paramentro "log4j.appender.file.File" para o diretorio da sua escolha:
+Na raiz do projeto (Server e Cliente) existe um arquivo "log4j.properties". 
+
+Dessa forma, edite cada arquivo e modifique o parâmetro "log4j.appender.file.File" para o diretório da sua escolha:
 Exemplo:
 
 Dentro da pasta Server (log4j.properties): 
@@ -116,7 +117,7 @@ log4j.appender.file.File=E:\\TCP\\loggingClientTCP.log
 Após realizar as modificações, execute a classe ( nos dois projetos: Server e Cliente):
 -> LogTest.java
 		 
-Como resultado se estiver tudo certo devera aparecer:
+Como resultado, se estiver tudo certo, deverá aparecer:
 
   2021-07-29 19:36:42 INFO  LogTest:27 - This is an Info
   
