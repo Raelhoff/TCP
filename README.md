@@ -130,7 +130,7 @@ Escolha a opção desejada (tipo de pacote a ser enviado ao servidor):
    
 4) Sair
 
-# Simular ServidorTCP com varios conexões (client)
+# Simular ServidorTCP com  várias conexões (client)
 
 Similar a ferramenta como PacketSender, foi utilizado a aplicação Hercules SETUP utility (Link para download: https://www.hw-group.com/files/download/sw/version/hercules_3-2-8.exe).
 
