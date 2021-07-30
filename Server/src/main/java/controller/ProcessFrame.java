@@ -42,6 +42,28 @@ public class ProcessFrame {
 
     }
 
+    
+    public static int geraCRCACKDefault(int frame) {
+         /*
+            buffer total - CRC
+            data={
+                byte    = 4
+                frame   = 4=> 8 (INT)
+      
+            }
+        */
+
+        byte[] data = new byte[ 8];
+        
+        data[0] =  (byte)(0x05);
+        data[4] =  (byte)frame;
+
+        ControleCRC crc8 = new ControleCRC();
+        int crc = crc8.calculaCRC8(data);
+        System.out.println(crc8.retornaCRC(data));
+        return crc;
+     }
+    
     public static int geraCRCString(String valor, int frame) {
          /*
             buffer total - CRC
@@ -66,7 +88,29 @@ public class ProcessFrame {
         System.out.println(crc8.retornaCRC(data));
         return crc;
      }
-    
+  
+       public static byte[] geraBufferACKDefault( int frame, int crc) {
+        
+        /*
+            buffer total 
+                init    = 4
+                byte    = 4
+                frame   = 4  =>  12
+
+                
+                CRC     = 4
+                END     = 4 =>    8
+                                  12 + 8 = 20 (INT)
+        */
+        byte[] data2 = new byte[20];
+        data2[0] =  0x0a;
+        data2[4] =  (byte)(5);
+        data2[8] =  (byte)frame;
+        data2[12] =  (byte)crc;
+        data2[16] =  (byte)0x0d;
+      return data2;
+    }
+       
      public static byte[] geraBufferString(String valor, int frame, int crc) {
         byte[] nome = valor.getBytes();
         
