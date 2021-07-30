@@ -46,24 +46,6 @@ As mesmas podem ser encontradas no pacote:
 	    util
 		
 
-## Testar CRC-8
-Para testar a criptografia, execute a classe:
-Main.java
-
-As mesmas podem ser encontradas no pacote:
-->	Test Packages
-         |
-	    crc
-
-O buffer a ser verificado foi:
-public static final byte[] TestBytes = new byte[]{9, 1, 49, 50, 51, 52};
-
-Como resultado, deve ser obetido:
-
--> CRC-8 - BAD ALGO!!! C6
-
-
-		
 ## Testar consulta e inserção de dados no banco de dados H2        
 Para realizar o cadastro de dados nas tabelas (REGISTRATION, USER), execute as classes:
 
@@ -100,6 +82,22 @@ ID: 1
 Mensagem: Ok
 
 Data: 27/07/2021
+
+## Testar CRC-8
+Para testar a criptografia, execute a classe:
+Main.java
+
+As mesmas podem ser encontradas no pacote:
+->	Test Packages
+         |
+	    crc
+
+O buffer a ser verificado foi:
+public static final byte[] TestBytes = new byte[]{9, 1, 49, 50, 51, 52};
+
+Como resultado, deve ser obetido:
+
+-> CRC-8 - BAD ALGO!!! C6
 
 ## Testar configurações do arquivo de Log (Log4j)
 Na raiz do projeto (Server e Cliente) existe um arquivo "log4j.properties". Edite cada arquivo e 
