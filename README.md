@@ -160,9 +160,9 @@ Escolha a opção desejada (tipo de pacote a ser enviado ao servidor):
    
 4) Sair
 
-# Simular ServidorTCP com  várias conexões (client)
+# Simular ServidorTCP com  várias conexões (TCP Client)
 
-Similar a ferramenta como PacketSender, foi utilizado a aplicação Hercules SETUP utility (Link para download: https://www.hw-group.com/files/download/sw/version/hercules_3-2-8.exe).
+Similar à ferramenta como PacketSender, foi utilizado a aplicação Hercules SETUP utility (Link para download: https://www.hw-group.com/files/download/sw/version/hercules_3-2-8.exe).
 
 Hercules SETUP utility possibilita realizar a comunicação serial, TCP (Server e Client) e UDP (Server e Client).
 
