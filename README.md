@@ -35,7 +35,9 @@ realize o download das dependecias do projeto por meio do Maven.
 
 ## Criar tabela do banco de dados
 Para criar as tabelas (REGISTRATION, USER), entre no projeto Server, e execute as classes:
+
 -> CreateTablesREGISTRATION.java
+
 -> CreateTablesUSER.java
 
 As mesmas podem ser encontradas no pacote:
