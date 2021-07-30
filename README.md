@@ -55,31 +55,46 @@ O buffer a ser verificado foi:
 public static final byte[] TestBytes = new byte[]{9, 1, 49, 50, 51, 52};
 
 Como resultado, deve ser obetido:
+
 -> CRC-8 - BAD ALGO!!! C6
 
 
 		
 ## Testar consulta e inserção de dados no banco de dados H2        
 Para realizar o cadastro de dados nas tabelas (REGISTRATION, USER), execute as classes:
+
 -> H2jdbcInsertREGISTRATION.java
+
 -> H2jdbcInsertUSER.java 
 
 Logo, para realizar a consulta nas mesma tabelas, execute:
+
 -> H2jdbcGetREGISTRATION.java
+
 -> H2jdbcGetUSER.java
 
 Como resultado, deve ser exibido:
-Tabela USER
+
+###Tabela USER
+
 ID: 1
+
 Idade: 30
+
 Peso: 80
+
 Altura: 30
+
 Tamanho do nome: 6
+
 Nome: Rafael
 
-Tabela REGISTRATION
+###Tabela REGISTRATION
+
 ID: 1
+
 Mensagem: Ok
+
 Data: 27/07/2021
 
 ## Testar configurações do arquivo de Log (Log4j)
