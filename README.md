@@ -113,7 +113,7 @@ Dentro da pasta Client (log4j.properties):
 
 log4j.appender.file.File=E:\\TCP\\loggingClientTCP.log  
  		  
-Apos realizar as modificações, execute a classe ( nos dois projetos: Server e Cliente):
+Após realizar as modificações, execute a classe ( nos dois projetos: Server e Cliente):
 -> LogTest.java
 		 
 Como resultado se estiver tudo certo devera aparecer:
