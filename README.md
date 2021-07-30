@@ -140,10 +140,12 @@ Para executar o projeto Client, entre no pacote com.mycompany.client, e posterio
 -> SendPackage.java
 
 A ideia desse projeto é simular outros parâmetros a serem cadastrados no banco de dados. Dessa forma, o Client envia novos parâmetros  e 
-recebe o retorno do server, posteriormente, fecha a conexão.
+recebe o retorno do Server, posteriormente, fecha a conexão.
 
-Logo, apos executar o mesmo, será exibida a seguinte mensagem via console:
+Logo, após executar o mesmo, será exibida a seguinte mensagem via console:
+
 Escolha a opção desejada (tipo de pacote a ser enviado ao servidor):
+
 1) Buffer A1
    Entre com a mensagem:
    
