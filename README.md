@@ -130,10 +130,10 @@ Como resultado, se estiver tudo certo, deverá aparecer:
 # Iniciando Projeto TCP 
 
 ## Execute Projeto Server
-Para executar o projeto server, entre no pacote serverTCP, e posteriormente execute (Run File):
+Para executar o projeto server, entre no pacote serverTCP, e posteriormente execute a classe (Run File):
 -> Server_X_Client.java (Run File)
 
-Por padrão, o servidor está configurado com a porta: 4447
+Por padrão, o servidor encontra-se configurado com a porta: 4447
 
 ## Executando do Projeto Client
 Para executar o projeto client, entre no pacote com.mycompany.client, e posteriormente execute (Run File):
