@@ -53,7 +53,7 @@ Para realizar o cadastro de dados nas tabelas (REGISTRATION, USER), execute as c
 
 -> H2jdbcInsertUSER.java 
 
-Logo, para realizar a consulta nas mesma tabelas, execute:
+Logo, para realizar a consulta nas mesmas tabelas, execute:
 
 -> H2jdbcGetREGISTRATION.java
 
