@@ -30,7 +30,7 @@ git clone https://github.com/Raelhoff/TCP.git
 
 # Configuração do Projeto
 Abra o projeto Client e Server em um ambiente de desenvolvimento da sua escolha (NetBeans, Eclipse, etc). Posteriomente,
-realize o download das dependecias do projeto por meio do Maven.
+realize o download das dependências do projeto por meio do Maven.
 
 
 ## Criar tabela do banco de dados
