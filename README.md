@@ -136,11 +136,11 @@ Para executar o projeto server, entre no pacote serverTCP, e posteriormente exec
 Por padrão, o servidor encontra-se configurado com a porta: 4447
 
 ## Executando do Projeto Client
-Para executar o projeto Client, entre no pacote com.mycompany.client, e posteriormente execute classe (Run File):
+Para executar o projeto Client, entre no pacote com.mycompany.client, e posteriormente execute a classe (Run File):
 -> SendPackage.java
 
-A ideia desse projeto é simular outros parametros a serem cadastrados no banco de dados, dessa forma, o client envia novos paramentros e 
-recebe o retorno do server e posterioment, fecha a conexão.
+A ideia desse projeto é simular outros parâmetros a serem cadastrados no banco de dados. Dessa forma, o Client envia novos parâmetros  e 
+recebe o retorno do server, posteriormente, fecha a conexão.
 
 Logo, apos executar o mesmo, será exibida a seguinte mensagem via console:
 Escolha a opção desejada (tipo de pacote a ser enviado ao servidor):
