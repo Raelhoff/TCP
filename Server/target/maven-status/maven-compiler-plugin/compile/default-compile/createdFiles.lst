@@ -1,15 +1,9 @@
-util\ControleCRC.class
-util\CrcHelper.class
-controller\ProcessBuffer.class
-util\AlgoParams.class
-util\Crc8.class
 DAO\BancoConnection.class
 model\Data.class
 controller\ProcessFrame.class
 DAO\RegistrationDAO.class
 serverTCP\Server_X_Client.class
 serverTCP\ServerThread.class
-util\CrcCalculator.class
 model\Registration.class
 DAO\UserDAO.class
 model\User.class

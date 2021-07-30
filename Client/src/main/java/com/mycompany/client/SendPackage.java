@@ -172,7 +172,7 @@ public class SendPackage {
    
   
  // constructor to put ip address and port
- public SendPackage(String address, int port, int tipo, LogGenerator log ) {
+ public SendPackage(String address, int port, int tipo, LogGenerator log, String msg, User u) {
     // establish a connection
     try {
         socket = new Socket(address, port);
@@ -186,9 +186,9 @@ public class SendPackage {
    
         //takes input from socket
         in = new DataInputStream(socket.getInputStream());
-    } catch (UnknownHostException u) {
-        System.out.println(u);
-        log.inserError(u.toString());
+    } catch (UnknownHostException c) {
+        System.out.println(c);
+        log.inserError(c.toString());
     } catch (IOException i) {
         System.out.println(i);
         log.inserError(i.toString());
@@ -198,22 +198,19 @@ public class SendPackage {
         byte[] data = null;  
         if(tipo == 1){
             log.inserInfo("Enviando frame: A1");
-            String valor = "Rafael Hoffmann";
-            int crc = geraCRCString(valor, 0xa1);
-            data    = geraBufferString(valor,  0xa1, crc);
+            int crc = geraCRCString(msg, 0xa1);
+            data    = geraBufferString(msg,  0xa1, crc);
         }else
         if(tipo == 2){
             log.inserInfo("Enviando frame: A2");
-            String nome = "Rafael Hoffmann";
-            User u = new User(30, 80, 170, nome.length(), nome );
             int crc = geraCRCA2(u);
             data =geraBufferA2(u, crc);
         }else
         if(tipo == 3){
             log.inserInfo("Enviando frame: A3");
-            String valor = "America/Sao_Paulo";
-            int crc = geraCRCString(valor, 0xa3);
-            data    = geraBufferString(valor,  0xa3, crc);
+            //msg "America/Sao_Paulo"
+            int crc = geraCRCString(msg, 0xa3);
+            data    = geraBufferString(msg,  0xa3, crc);
         }        
      
     // sending data to server
@@ -268,7 +265,8 @@ public class SendPackage {
         int op   = -1,
             tipo = -1;
         LogGenerator log = new LogGenerator();
-    
+        Scanner myObj =null;
+        User u = null;
         String addrees = "127.0.0.1";
         int    port    = 4447;
                 
@@ -286,15 +284,39 @@ public class SendPackage {
         System.out.print("Opção: ");
         op   = getScanner().nextInt();
         tipo = -1;
+        String msg = "";
         switch (op) {
 
             case 1:
+                myObj = new Scanner(System.in);  // Create a Scanner object
+                System.out.println("Entre com a mensagem");
+                msg = myObj.nextLine();  // Read user input
                 tipo = 1;
                 break;
             case 2:
+                myObj = new Scanner(System.in);  // Create a Scanner object
+                System.out.println("Entre com a idade");
+                int idade = myObj.nextInt();
+                
+                System.out.println("Entre com peso");
+                int peso = myObj.nextInt();
+                
+                System.out.println("Entre com altura");
+                int altura = myObj.nextInt();
+                               
+                myObj.nextLine(); 
+                 
+                System.out.println("Entre com o nome");
+                msg = myObj.nextLine();  // Read user input
+                
+                u = new User(idade, peso, altura, msg.length(), msg );
+
                 tipo = 2;
                 break;
             case 3:
+                myObj = new Scanner(System.in);  // Create a Scanner object
+                System.out.println("Entre com o servidor (America/Sao_Paulo)");
+                msg = myObj.nextLine();  // Read user input
                 tipo = 3;
                 break;
             case 4:
@@ -305,7 +327,7 @@ public class SendPackage {
                 menu();    
         }
         
-        new SendPackage(addrees, port, tipo, log);
+        new SendPackage(addrees, port, tipo, log, msg, u );
         System.out.println("Process closed");
         log.inserWarn("Process closed");
  }

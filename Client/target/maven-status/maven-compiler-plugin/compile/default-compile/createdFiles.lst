@@ -1,13 +1,10 @@
 crc\ControleCRC.class
-com\mycompany\client\ClientA3.class
 crc\Crc32.class
 crc\Crc16.class
 crc\CrcHelper.class
-com\mycompany\client\ClientA1.class
 crc\Main.class
 crc\Crc64.class
 crc\AlgoParams.class
 crc\Crc8.class
 crc\CrcCalculator.class
 model\User.class
-com\mycompany\client\ClientA2.class

@@ -15,7 +15,7 @@ public class CrcCalculator {
     //http://www.sunshine2k.de/coding/javascript/crc/crc_js.html
     //10 A1 48 65 6C 6C 6F 20 57 6F 72 6C 64
     
-    public static final byte[] TestBytes = new byte[]{9, 1, 31, 32, 33, 34};;
+    public static final byte[] TestBytes = new byte[]{9, 1, 49, 50, 51, 52};;
 
     CrcCalculator(AlgoParams params)
     {
