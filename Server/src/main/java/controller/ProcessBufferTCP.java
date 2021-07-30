@@ -5,8 +5,10 @@
  */
 package controller;
 
+import static controller.ProcessFrame.geraBufferACKDefault;
 import static controller.ProcessFrame.geraBufferDataHora;
 import static controller.ProcessFrame.geraBufferString;
+import static controller.ProcessFrame.geraCRCACKDefault;
 import static controller.ProcessFrame.geraCRCDataHora;
 import static controller.ProcessFrame.geraCRCString;
 import java.io.FileWriter;
@@ -168,8 +170,8 @@ public class ProcessBufferTCP {
             log.inserInfo(msg);
             geraCRCString(msg, 0x0a);
            
-            int crc = geraCRCString(msg, 0x0a);
-            data    = geraBufferString(msg,  0x0a, crc);
+            int crc = geraCRCACKDefault(0x0a);
+            data    = geraBufferACKDefault( 0x0a, crc);
             
             // sending data to server
             outputStream.write(data);
@@ -190,8 +192,8 @@ public class ProcessBufferTCP {
             log.inserInfo(msg);
             geraCRCString(msg, 0x0a);
            
-            int crc = geraCRCString(msg, 0x0a);
-            data    = geraBufferString(msg,  0x0a, crc);
+            int crc = geraCRCACKDefault(0x0a);
+            data    = geraBufferACKDefault( 0x0a, crc);
             
             // sending data to server
             outputStream.write(data);
