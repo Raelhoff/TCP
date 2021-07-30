@@ -95,7 +95,7 @@ As mesmas podem ser encontradas no pacote:
 O buffer a ser verificado foi:
 public static final byte[] TestBytes = new byte[]{9, 1, 49, 50, 51, 52};
 
-Como resultado, deve ser obetido:
+Como resultado, deve ser obtido:
 
 -> CRC-8 - BAD ALGO!!! C6
 
