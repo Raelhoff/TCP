@@ -100,7 +100,7 @@ Como resultado, deve ser obtido:
 -> CRC-8 - BAD ALGO!!! C6
 
 ## Testar configurações do arquivo de Log (Log4j)
-Na raiz do projeto (Server e Cliente) existe um arquivo "log4j.properties". 
+Na raiz do projeto (Server e Client) existe um arquivo "log4j.properties". 
 
 Dessa forma, edite cada arquivo e modifique o parâmetro "log4j.appender.file.File" para o diretório da sua escolha:
 Exemplo:
@@ -136,7 +136,7 @@ Para executar o projeto server, entre no pacote serverTCP, e posteriormente exec
 Por padrão, o servidor encontra-se configurado com a porta: 4447
 
 ## Executando do Projeto Client
-Para executar o projeto client, entre no pacote com.mycompany.client, e posteriormente execute (Run File):
+Para executar o projeto Client, entre no pacote com.mycompany.client, e posteriormente execute classe (Run File):
 -> SendPackage.java
 
 A ideia desse projeto é simular outros parametros a serem cadastrados no banco de dados, dessa forma, o client envia novos paramentros e 
