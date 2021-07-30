@@ -18,7 +18,7 @@ Posteriormente execute: java -jar h2-1.4.200.jar
 Logo, deverá abrir uma interface do banco de dados.
 
 
-# Donwload do ambiente de desenvolvimento
+# Download do ambiente de desenvolvimento
 Foi utilizado o Apache NetBeans 12.0 com o jdk1.8.0_241
 
 Link: https://downloads.apache.org/netbeans/netbeans/12.0/Apache-NetBeans-12.0-bin-windows-x64.exe
