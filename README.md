@@ -168,7 +168,7 @@ Hercules SETUP utility possibilita realizar a comunicação serial, TCP (Server 
 
 Diante do exposto, pode ser executado multiplas aplicações (Hercules) TCP Client para realizar a comunicação com Server (Java).
 
-Na pasta docs (raiz do projeto) tem imagens que ajudam a realizar a simulação com multiplos clientes (Hercules Setup).
+Na pasta docs (raiz do projeto) tem imagens que ajudam a realizar a simulação com múltiplos clientes (Hercules Setup).
 
 ##  Exemplos de pacotes aceitos
 
