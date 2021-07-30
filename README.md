@@ -86,17 +86,27 @@ Data: 27/07/2021
 Na raiz do projeto (Server e Cliente) existe um arquivo "log4j.properties". Edite cada arquivo e 
 modifique o paramentro "log4j.appender.file.File" para o diretorio da sua escolha:
 Exemplo:
-Dentro da pasta Server (log4j.properties): log4j.appender.file.File=E:\\TCP\\loggingServerTCP.log  
-Dentro da pasta Client (log4j.properties): log4j.appender.file.File=E:\\TCP\\loggingClientTCP.log  
+
+Dentro da pasta Server (log4j.properties): 
+
+log4j.appender.file.File=E:\\TCP\\loggingServerTCP.log  
+
+
+Dentro da pasta Client (log4j.properties): 
+
+log4j.appender.file.File=E:\\TCP\\loggingClientTCP.log  
  		  
 Apos realizar as modificações, execute a classe ( nos dois projetos: Server e Cliente):
 -> LogTest.java
 		 
 Como resultado se estiver tudo certo devera aparecer:
---- exec-maven-plugin:1.5.0:exec (default-cli) @ Server ---
+
   2021-07-29 19:36:42 INFO  LogTest:27 - This is an Info
+  
   2021-07-29 19:36:42 WARN  LogTest:28 - This is a Warn
+  
   2021-07-29 19:36:42 ERROR LogTest:29 - This is an Error
+  
   2021-07-29 19:36:42 FATAL LogTest:30 - This is a Fatal
   
 # Iniciando Projeto TCP 
